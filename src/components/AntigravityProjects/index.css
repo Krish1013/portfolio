@@ -1,0 +1,142 @@
+.antigravity-section {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.antigravity-section::before {
+  content: 'AI';
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: 260px;
+  font-weight: 800;
+  color: var(--border);
+  opacity: 0.25;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.antigravity-intro {
+  color: var(--text-muted);
+  font-size: 16px;
+  max-width: 560px;
+  margin-top: -24px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+.ag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.ag-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.ag-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-2);
+}
+
+.ag-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ag-status {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.status-in-progress {
+  background: rgba(200, 66, 26, 0.12);
+  color: var(--accent);
+}
+
+.status-planning {
+  background: rgba(26, 79, 200, 0.1);
+  color: var(--accent-2);
+}
+
+.ag-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ag-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.ag-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.ag-tag {
+  background: rgba(26, 79, 200, 0.08);
+  color: var(--accent-2);
+  border: 1px solid rgba(26, 79, 200, 0.2);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ag-add-card {
+  border-style: dashed;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: default;
+}
+
+.ag-add-card:hover {
+  border-color: var(--accent);
+  border-style: dashed;
+  background: var(--accent-light);
+}
+
+.ag-add-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--text-muted);
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .ag-grid { grid-template-columns: 1fr; }
+  .antigravity-section::before { display: none; }
+}
