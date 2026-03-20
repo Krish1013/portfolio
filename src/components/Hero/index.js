@@ -40,7 +40,7 @@ function Hero() {
 
         <div className={`hero-badge-group ${loaded ? 'loaded' : ''}`}>
           <div className="hero-badge">
-            <span className="badge-num">4+</span>
+            <span className="badge-num">10+</span>
             <span className="badge-label">Projects</span>
           </div>
           <div className="hero-badge">
