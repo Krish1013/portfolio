@@ -29,7 +29,7 @@ function Hero() {
               View Projects →
             </a>
             <a
-              href="/resume.pdf"
+              href="/latest_resume_.pdf"
               className="btn btn-outline"
               download
             >
